@@ -1,0 +1,332 @@
+    /* HEADER */
+
+    .header_subList {
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    .header_subList li {
+        padding: 0px 10px;
+        list-style-type: none;
+    }
+
+    .header_subList li a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    .header_subList li a:hover {
+        color: #ffcc00;
+        text-decoration: none;
+    }
+
+    #header_mainList.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 1;
+    }
+
+    #header_mainList ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #header_mainList ul li {
+        display: inline-block;
+        font-size: 25px;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    #header_mainList ul li a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    #header_mainList ul li a:hover {
+        color: darkcyan;
+        text-decoration: none;
+    }
+
+    .header_logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #logo_img {
+        justify-content: space-evenly;
+    }
+
+    h1, h2, h3, h4, h5, p {
+        text-align: center;
+    }
+
+    .container {
+        flex: 1 1 auto;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    /* SECTION 1 */
+
+    #section_main {
+        background-image: url("img/main_img.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 700px;
+    }
+
+    .section_main_content {
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 150px;
+    }
+
+    #section_main h1 {
+        font-size: 100px;
+        color: #222f35;
+        align-items: center;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    #section_main h3 {
+        color: black;
+        font-size: 35px;
+        margin-top: 10px;
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .section_main_btn {
+        background-color: #d0a330;
+        border-radius: 4px ;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 20px;
+        height: 60px;
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .section_main_btn span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .section_main_btn span:after {
+        content: '\00bb';
+        opacity: 0;
+        position: absolute;
+        right: -20px;
+        top: 0;
+        transition: 0.5s;
+    }
+
+    .section_main_btn:hover span {
+        padding-right: 25px;
+    }
+
+    .section_main_btn:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    /* SECTION2 */
+
+    #section_about {
+        height: 600px;
+        margin: 50px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex;
+        align-items: center;
+    }
+
+    .section_about_left {
+        background-color: #f4f5f0;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .section_about_left h1 {
+        align-items: center;
+        color: #222f35;
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    .section_about p {
+        align-items: center;
+        color: #517957;
+    }
+
+    .section_about_btn {
+        background-color: #517957;
+        border: none;
+        color: #FFFFFF;
+        font-size: 20px;
+        padding:0px 40px;
+        height: 40px;
+        margin-top: 10px;
+
+    }
+
+    .section_about_right {
+        background-image: url("img/about_img.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 50%;
+    }
+
+    /* SECTION3 */
+
+    #section_community {
+        background-color: #f4f5f0;
+        margin: 50px 0px;
+    }
+
+    #section_community_h1 {
+        padding-top: 50px;
+        font-size: 40px;
+    }
+
+    .section_commnuity_container {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .section_community_1st {
+        border-radius: 13px;
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0px;
+    }
+
+    .section_community_1st_list {
+        border: #d0a330 1px solid;
+        border-radius: 13px;
+        justify-content: center;
+    }
+
+    .section_community_2nd {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0px;
+    }
+
+    .section_community_2nd_list {
+        border: #517957 1px solid;
+        justify-content: space-around;
+        border-radius: 13px;
+    }
+
+    .section_community_img {
+        border-radius: 13px;
+    }
+
+    /* SECTION4 */
+
+    #section_shop {
+        background-image: url("img/shop_img.jpg");
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+        align-items: center;
+        height: 800px;
+    }
+
+    #section_shop_h1 {
+        color: black;
+        font-size: 80px;
+        margin-top: 300px;
+    }
+
+    #section_shop_btn {
+        align-self: center;
+        width: 10%;
+        background-color: #d0a330;
+        border: none;
+        border-radius: 4px;
+        color: #FFFFFF;
+        font-size: 20px;
+        height: 40px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        width: auto;
+        padding: 0 20px 0 20px;
+    }
+
+    .footerAll {
+        display: inline-block;
+        width: 19.5%;
+        height: 250px;
+    }
+
+    .footerAll ul {
+        padding-left: 0px;
+    }
+
+    .footerAll ul li {
+        color: grey;
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .footerAll ul li a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    .footerAll ul li a:hover {
+        color: #ffcc00;
+        text-decoration: none;
+    }
+
+    .footerAll i {
+        padding: 10px 10px;
+    }
+
+    #footerLast {
+        color: grey;
+    }
+
+    #topButton {
+        position: fixed;
+        right: 2%;
+        bottom: 50px;
+        display: none;
+        z-index: 999;
+    }

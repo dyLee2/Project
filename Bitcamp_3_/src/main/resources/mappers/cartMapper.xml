@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cartMapper">
+	<!-- 장바구니추가 -->
+	<insert id="insert">
+
+	</insert>
+ 
+	<!-- 장바구니목록 -->
+	<select id="selectList" resultType="org.comstudy21.vo.CartDTO">
+
+	</select>
+
+	<!-- 장바구니삭제 -->
+	<delete id="delete">
+
+	</delete>
+</mapper>

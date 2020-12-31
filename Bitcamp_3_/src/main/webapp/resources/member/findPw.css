@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #F4F5F0
+}
+.findPW_box{
+    width: 260px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #517957; 
+}
+.findPW_box h1{
+    float: left;
+    font-size: 42px;
+    border-bottom: 6px solid;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+}
+.findPW_id, .findPW_email, .findPW_name{
+    width: 98%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid silver;
+}
+
+.findPW_btn{
+    width: 100%;
+    background-color: #D0A330;
+    border: 2px solid  silver;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+    height: 50px;
+}

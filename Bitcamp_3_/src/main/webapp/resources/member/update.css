@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #F4F5F0;
+}
+.membership_modify{
+    width: 500px;
+    position: absolute;
+    top: 5px;
+    left: 31%;
+    color:#517957;
+}
+.membership_modify h1{
+    font-size: 65px;
+    text-align: center;
+    border-bottom: 5px solid;
+}
+.modify_ID_check{
+    background-color: #D0A330;
+    border: 1px solid silver;
+    float: right;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+}
+.modify_ID{
+    width: 70%;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    
+}
+.modify_PW, .modify_PW_check{
+    width: 94%;
+    font-size: 18px;
+    height: 30px;
+    border: silver 1px solid;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+}
+.modify_name{
+    width: 100%;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.modify_birthdate, .modify_num{
+    width: 100%;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.modify_postcodify_postcode5 {
+    width: 50%;
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+.postcodify_search_button{
+    background-color: #D0A330;
+    border: 1px solid silver;
+    font-size: 15px;
+    margin: 0px,0px,5px, 15px;
+    padding: 0;
+    height: 30px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+.modify_postcodify_address, .modify_postcodify_details{
+    width: 100%;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+   
+}
+
+.modify_email1, .modify_email2{
+    width: 33%;
+    font-size: 18px;
+    text-align:center;
+    height: 30px;
+    border: silver 1px solid;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.modify_email3{
+    width: 27%;
+    font-size: 18px;
+    background: none;
+    text-align:center;
+    border: 2px solid #D0A330;
+    color:  #222F35;
+    height: 30px;
+    border-radius: 5px;
+}
+.planterior{
+    width: 500px;
+    position: absolute;
+    top: 5px;
+    left: 31%;
+    color: #222F35;
+}
+.modify_planterior_name, .modify_planterior_variety, .modify_planterior_age{
+    width: 50%;
+    font-size: 18px;
+    margin-top: 3%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.memberModify_btn1{
+    background-color: #D0A330;
+    width: 100%;
+    border: 1px solid silver;
+    margin: 5px 0 5px 0;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    border-radius: 5px;
+}
+.delete{
+    background-color: #517957;
+    width: 100%;
+    border: 1px solid silver;
+    margin: 5px 0 5px 0;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+}

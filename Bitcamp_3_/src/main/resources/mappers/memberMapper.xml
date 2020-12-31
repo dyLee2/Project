@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+	
+	<!-- 회원가입 -->
+	<insert id="signUp">
+	    INSERT INTO MEMBERS 
+	    VALUES(#{mId},
+	    	#{pw}
+	    	,#{mName}
+	    	,#{birth}
+	    	,#{phone}
+	    	,#{addr1}
+	    	,#{addr2}
+	    	,#{addr3}
+	    	,#{email1}
+	    	,#{email2}
+	    	,#{p_name}
+	    	,#{p_kind}
+	    	,#{p_age}
+	    	,#{p_img})
+    </insert>
+   
+   <!-- 로그인 -->
+   <select id="login" resultType="org.comstudy21.vo.MemberVO">
+   SELECT mId, pw, mName, birth, phone, addr1, addr2, addr3, email1, email2, p_name, p_kind, p_age 
+   from MEMBERS
+   where mId = #{mId}
+   AND pw = #{pw}
+    </select>
+   
+   <!-- 회원정보수정 -->
+   <update id = "memberUpdate">
+   	UPDATE members SET
+   	pw = #{pw},
+   	mName = #{mName},
+   	birth = #{birth},
+   	phone = #{phone},
+   	addr1 = #{addr1},
+   	addr2 = #{addr2},
+   	addr3 = #{addr3},
+   	email1 = #{email1},
+   	email2 = #{email2},
+   	p_name = #{p_name},
+   	p_kind = #{p_kind},
+   	p_age = #{p_age},
+   	p_img = #{p_img}
+   	WHERE mId = #{mId}
+   	</update>
+   	
+   	<!-- 회원탈퇴 -->
+   	<delete id="memberDelete">
+   		DELETE from members
+   		WHERE mId = #{mId}
+   		AND pw = #{pw}
+   	</delete>
+   	
+   	<select id="findId" resultType="org.comstudy21.vo.MemberVO">
+   		select * from members
+   		where mName=#{mName} and email1=#{email1} and email2=#{email2}
+   	</select>
+
+	
+  	<select id="findPw" resultType="org.comstudy21.vo.MemberVO">
+   		select * from members
+   		where mId=#{mId} and mName=#{mName} and email1=#{email1} and email2=#{email2}
+   	</select>
+   
+   <select id="idCheck" resultType="int">
+   	SELECT COUNT(*) FROM members
+   	WHERE mId = #{mId}
+   </select>
+   
+   <select id="getMember" resultType="org.comstudy21.vo.MemberVO">
+   		select * from members
+   		where mId = #{mId}
+   </select>
+   
+</mapper>

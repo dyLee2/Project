@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fileMapper">
+ 
+	<insert id="insertFile" parameterType="hashMap">
+		INSERT INTO fileUp(
+			fNo,
+			gNo,
+			orgName,
+			strName,
+			fSize
+		)VALUES(
+			(
+				SELECT fno FROM 
+				(SELECT * FROM fileup ORDER BY fno DESC) 
+				WHERE ROWNUM = 1
+			),
+			#{gNo},
+			#{orgName},
+			#{strName},
+			#{fSize}
+		)
+    </insert>
+	
+	<insert id="insertProfile" parameterType="hashMap">
+		INSERT INTO fileUp(
+			fNo,
+			mId,
+			orgName,
+			strName,
+			fSize
+		)VALUES(
+			seq_fno.nextval,
+			#{mId},
+			#{orgName},
+			#{strName},
+			#{fSize}
+		)
+    </insert>
+    
+    <select id="getBoardImg" resultType="org.comstudy21.vo.FileupVO">
+    	select * from fileup
+    	where fno = #{fNo}
+    </select>
+	
+	
+</mapper>

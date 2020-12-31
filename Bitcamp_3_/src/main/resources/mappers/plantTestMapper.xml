@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plantTestMapper">
+	<select id="getPlants" resultType="org.comstudy21.vo.PlantTestVO">
+		SELECT p_name
+		FROM PLANT
+		WHERE p_size=#{p_size} AND 1=1
+		<choose>
+			<when test='p_lv.equals("high")'>AND p_lv in('high','normal', 'easy')</when>
+			<when test='p_lv.equals("normal")'>AND p_lv in('normal', 'easy')</when>
+			<otherwise>AND p_lv ='easy'</otherwise>
+		</choose>
+			<if test='p_reason.equals("Y")'>AND p_reason = 'Y'</if>
+			<if test='p_ownPet.equals("Y")'>AND p_toxic = 'N'</if>
+	</select>
+</mapper>

@@ -1,0 +1,44 @@
+/* FOOTER */
+
+footer {
+    width: auto;
+    padding: 0 20px 0 20px;
+}
+
+.footerAll {
+    display: inline-block;
+    width: 19.5%;
+    height: 250px;
+}
+
+.footerAll ul {
+    padding-left: 0px;
+}
+
+.footerAll ul li {
+    color: grey;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footerAll ul li a {
+    color: grey;
+    text-decoration: none;
+}
+
+.footerAll ul li a:hover {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footerAll i {
+    padding: 10px 10px;
+}
+
+#footerLast {
+    color: grey;
+}
+

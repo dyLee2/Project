@@ -1,0 +1,6 @@
+[1220/213223.464:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1222/100214.677:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1222/102821.765:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1222/110356.659:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1222/114346.190:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1222/161926.560:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)

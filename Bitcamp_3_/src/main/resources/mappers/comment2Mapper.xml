@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comment2Mapper">
+
+<!-- 댓글 조회 -->
+	<select id="readComment" resultType="org.comstudy21.vo.CommentVO">
+    	SELECT gcNo, gcContents, gcWriter, gcDATE
+    	 FROM gComment2
+    	WHERE gNo = #{gNo} 
+	</select>
+
+<!-- 댓글 작성 -->
+	<insert id="writeComment">
+	INSERT INTO Gcomment2(
+		gNo,
+		gcNo,
+		gcContents,
+		gcWriter
+	)
+	VALUES(
+		#{gNo}
+		, gComment2_seq.nextvaL
+		, #{gcContents}
+		, #{gcWriter})
+	</insert>
+	
+	<!-- 댓글 삭제 -->
+	<delete id = "deleteComment" parameterType = "org.comstudy21.vo.CommentVO">
+		DELETE from Gcomment2
+			WHERE gcNo = #{gcNo}
+	</delete>
+	
+</mapper>

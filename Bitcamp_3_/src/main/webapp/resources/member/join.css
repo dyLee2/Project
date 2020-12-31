@@ -1,0 +1,189 @@
+body {
+    background-color: #F4F5F0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    align-content: center;
+    justify-content: center;
+}
+
+.join_box {
+    border: 1px solid slateblue;
+    color: #517957;
+    padding: 40px;
+    width: 500px;
+}
+
+.join_box h1 {
+    border-bottom: 5px solid;
+    font-size: 65px;
+    text-align: center;
+}
+
+.join_idcheck {
+    background-color: #D0A330;
+    border: silver 1px solid;
+    border-radius: 5px;
+    color: #222F35;
+    float: right;
+    font-size: 18px;
+    height: 34px;
+}
+.join_nicCheck{
+    background-color: #D0A330;
+    border: silver 1px solid;
+    border-radius: 5px;
+    color: #222F35;
+    float: right;
+    font-size: 18px;
+    height: 34px;
+}
+.join_id {
+    border-radius: 5px;
+    border: 1px solid silver;
+    font-size: 18px;
+    height: 30px;
+    width: 68%;
+}
+
+.join_pw, .join_PW_confirm {
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 94%;
+}
+
+.join_name, .join_birthdate, .join_num {
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 100%;
+}
+
+.postcodify_postcode5 {
+    border-radius: 5px;
+    border: 1px solid silver;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.postcodify_address, .postcodify_details {
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 100%;
+}
+
+.join_email1, .join_email2 {
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    margin-right: 5px;
+    width: 30%;
+}
+
+.join_email3 {
+    background: none;
+    border: 2px solid #D0A330;
+    border-radius: 5px;
+    color: #222F35;
+    font-size: 18px;
+    height: 30px;
+    width: 27%;
+}
+
+#postcodify_search_button {
+    background-color: #D0A330;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+    padding: 0;
+    width: 20%;
+}
+
+fieldset {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 5px;
+    color: #222F35;
+}
+
+.fieldset_left {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+}
+
+.fieldset_left_content {
+    margin-left: 30px;
+}
+
+#image_container {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #222F35;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+#profile_pt {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    color: black;
+    border: 0px solid black;
+    display: inline;
+    margin-top: 20px;
+}
+
+.fieldset_right {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+}
+
+.fieldset_right_content {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.fieldset_right_content input {
+    height: 20px;
+}
+
+.planterior {
+    border-radius: 5px;
+    color: #222F35;
+    width: 500px;
+}
+
+.planterior_name, .planterior_variety, .planterior_age {
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 50%;
+}
+
+.join_btn {
+    background-color: #D0A330;
+    border: silver 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+}

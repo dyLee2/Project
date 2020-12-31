@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board2Mapper">
+   
+    <!-- 게시판 글 작성 -->
+   <insert id="insert">
+	   INSERT INTO gBoard2(    gNo 
+	   					      , gTitle 
+	   					      , gWriter
+	   					      , gContents 
+	   					      , fNo
+	   					      )
+	                 VALUES(    gBoard2_SEQ.NEXTVAL 
+	                 		  , #{gTitle}
+	                 		  , #{gWriter}
+	                 		  , #{gContents}
+	                 		  , SEQ_FILEUP_NO.nextval
+	                 		    )
+   
+   </insert>
+   
+   	<select id="list" resultType="org.comstudy21.vo.BoardVO" parameterType="org.comstudy21.vo.SearchCriteria">
+		SELECT   gNo
+			   , gTitle
+			   , gContents
+			   , gWriter
+			   , gDate
+			   , gViews
+		  FROM (
+		  	SELECT gNO,
+		  	gTitle,
+		  	gContents,
+		  	gWriter,
+		  	gDate,
+		  	gViews,
+		  	ROW_NUMBER() OVER(ORDER BY gNo DESC) AS RNUM
+		  	FROM gBoard2
+		  	WHERE 1=1
+		  		<include refid="search"></include>
+		  ) gBoard2
+		  WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		  ORDER BY gNo DESC
+	</select>
+	
+	<!-- 게시판 조회수 -->
+	<update id= "boardViews" parameterType="int">
+		UPDATE gBoard2 SET
+		gViews = gViews+1
+		WHERE gNo = #{gNo}
+	</update>
+		
+	<select id="read" parameterType="int" resultType="org.comstudy21.vo.BoardVO">
+		SELECT gNo
+			, gTitle
+			, gContents
+			, gWriter
+			, gDate
+			, fNo
+			from gBoard2
+		where gNo = #{gNo}
+	
+	</select>
+	
+	<update id="update" parameterType="org.comstudy21.vo.BoardVO">
+		UPDATE gBoard2
+		 SET gTitle = #{gTitle},
+		 	 gContents = #{gContents}
+		 WHERE gNo = #{gNo}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE
+		 FROM gBoard2
+		 WHERE gNo = #{gNo}
+	</delete>
+	
+	<select id ="listCount" parameterType="org.comstudy21.vo.SearchCriteria" resultType="int">
+		SELECT COUNT(gNo)
+		FROM gBoard2
+		WHERE 1=1
+	<include refid="search"></include>
+	AND gNo>0
+	</select>
+	
+	<!-- 검색 부분 -->
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 't'.toString()">AND gTITLE LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'c'.toString()">AND gCONTENTs LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'w'.toString()">AND gWRITER LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'tc'.toString()">AND (gTITLE LIKE '%' || #{keyword} || '%') or (gCONTENTs LIKE '%' || #{keyword} || '%')</if>
+		</if>
+	</sql>
+	
+	
+	<insert id="insertFile" parameterType="hashMap">
+		INSERT INTO fileUp(
+			fNo,
+			gNo,
+			orgName,
+			strName,
+			fSize
+		)VALUES(
+			(
+				select fno from
+				(
+					select fno from gboard2 order by gno desc
+				)
+				where rownum = 1
+			),
+			(
+				select gno from
+				(
+					select gno from gboard2 order by gno desc
+				)
+				where rownum = 1
+			),
+			#{orgName},
+			#{strName},
+			#{fSize}
+		)
+    </insert>
+	
+	<select id="getReplyCnt" resultType="int">
+		select count(*) from gcomment2
+		where gno = #{gNo}
+	</select>
+	
+	
+</mapper>

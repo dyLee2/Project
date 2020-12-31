@@ -1,0 +1,141 @@
+@charset "UTF-8"; 
+
+body, html {
+	background-color: #ffffff;
+}
+
+.header_subList {
+	margin-bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.header_subList li {
+	padding: 0px 10px;
+	list-style-type: none;
+}
+
+.header_subList li a {
+	color: grey;
+	text-decoration: none;
+}
+
+.header_subList li a:hover {
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+#header_mainList.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 1;
+}
+
+#header_mainList ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#header_mainList ul li {
+	display: inline-block;
+	font-size: 25px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#header_mainList ul li a {
+	color: grey;
+	text-decoration: none;
+}
+
+#header_mainList ul li a:hover {
+	color: darkcyan;
+	text-decoration: none;
+}
+
+.header_logo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#logo_img {
+	justify-content: space-evenly;
+}
+
+/* ------------------------------------- */
+.guide_container {
+	display: flex;
+	padding: 5px 100px 20px 100px;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+
+.guide_container::after {
+	background-image: url("guide.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	filter: alpha(opacity = 50);
+	height: 100%;
+	opacity: 0.3 !important;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.guide_content {
+	padding: 10px 50px;
+}
+
+/* FOOTER */
+footer {
+	width: auto;
+	padding: 0 20px 0 20px;
+}
+
+.footerAll {
+	display: inline-block;
+	width: 19.5%;
+	height: 250px;
+}
+
+.footerAll ul {
+	padding-left: 0px;
+}
+
+.footerAll ul li {
+	color: grey;
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.footerAll ul li a {
+	color: grey;
+	text-decoration: none;
+}
+
+.footerAll ul li a:hover {
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+.footerAll i {
+	padding: 10px 10px;
+}
+
+#footerLast {
+	color: grey;
+}

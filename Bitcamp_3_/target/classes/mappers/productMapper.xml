@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="productMapper">
+
+	<!-- 상품등록 -->
+	<insert id="insert">
+		insert into Product (P_ID, P_SEQ, P_NAME, P_PRICE, P_CONTENT, P_STOCK, P_IMG)
+	   		values (#{P_ID}, P_SEQ.NEXTVAL, #{P_NAME}, #{P_PRICE}, #{P_CONTENT},
+	   		 		#{P_STOCK}, #{P_IMG})
+	</insert>
+
+	<!-- 상품목록 -->
+	<select id="selectList" resultType="org.comstudy21.vo.ProductDTO">
+		select P_NAME, P_PRICE, P_IMG from Product
+	</select>
+
+	<!-- 상품상세 -->
+	<select id="detail" resultType="org.comstudy21.vo.ProductDTO">
+		select P_NAME, P_PRICE, P_CONTENT, P_STOCK from Product
+			where P_ID = #{P_ID}
+	</select>
+	
+	<!-- 상품수정 -->
+	<update id="update">
+		update Product set		
+			P_NAME = #{P_NAME},
+			P_PRICE = #{P_PRICE},
+			P_CONTENT = #{P_CONTENT},
+			P_STOCK = #{P_STOCK},
+			P_IMG = #{P_IMG}
+				where P_ID = #{P_ID}
+	</update>
+	
+	<!-- 상품삭제 -->
+	<delete id="delete">
+		delete Product
+		where P_ID = #{P_ID}
+	</delete>
+	
+</mapper>

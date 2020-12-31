@@ -1,0 +1,10 @@
+
+#result {
+    display: none;
+    opacity: 0;
+}
+
+#result>div{
+    width: 100%;
+    height: 100%;
+}
