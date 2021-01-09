@@ -1,2 +1,3 @@
 # Project
-project test
+  *comunity
+  -
